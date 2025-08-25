@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://SEU_USUARIO.github.io/show-musical/" target="_blank">
+  <a href="https://Djavanpro7.github.io/Lado-B-Felismente/" target="_blank">
     <img src="https://img.shields.io/badge/Website-Online-brightgreen?style=for-the-badge&logo=github" alt="Website Online"/>
   </a>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -55,7 +55,7 @@ Meu **primeiro trabalho publicado** na área de desenvolvimento web.
 
 ## 🌐 Acesse o site
 
-➡ **[https://SEU_USUARIO.github.io/show-musical/](https://SEU_USUARIO.github.io/show-musical/)**
+➡ **[https://Djavanpro7.github.io/Lado-B-Felismente/](https://Djavanpro7.github.io/Lado-B-Felismente/)**
 
 ---
 
