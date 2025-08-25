@@ -1,7 +1,7 @@
 <h1 align="center">O Lado B F(Elis)mente – Landing Page</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SEU_USUARIO/show-musical/main/assets/banner.jpg" alt="Banner do show" width="800"/>
+  <img src="https://raw.githubusercontent.com/Djavanpro7/show-musical/main/assets/img/banner1.png" alt="Banner do show" width="800"/>
 </p>
 
 <p align="center">
@@ -16,9 +16,11 @@
 ---
 
 ## 📖 Sobre o Projeto
-Landing page desenvolvida para divulgação do show **"O Lado B F(Elis)mente – 1ª Edição"**, um mergulho poético-musical no lado B dos discos de Elis Regina, com estreia em setembro/2025 em Brasília.  
+
+Landing page desenvolvida para divulgação do show **"O Lado B F(Elis)mente – 1ª Edição"**, um mergulho poético-musical no lado B dos discos de Elis Regina, com estreia em setembro/2025 em Brasília.
 
 O objetivo é apresentar:
+
 - Informações sobre o show
 - Datas, locais e serviços
 - Contatos e redes sociais dos artistas
@@ -28,6 +30,7 @@ O release completo está disponível em [`RELEASE.md`](./RELEASE.md).
 ---
 
 ## 🚀 Tecnologias Utilizadas
+
 - **HTML5**
 - **CSS3**
 - **JavaScript (Vanilla)**
@@ -35,6 +38,7 @@ O release completo está disponível em [`RELEASE.md`](./RELEASE.md).
 ---
 
 ## 👨‍💻 Autor
+
 **Djavan Caetano** – Programador **Front-End** (HTML/CSS/JS)  
 Meu **primeiro trabalho publicado** na área de desenvolvimento web.
 
@@ -50,6 +54,7 @@ Meu **primeiro trabalho publicado** na área de desenvolvimento web.
 ---
 
 ## 🌐 Acesse o site
+
 ➡ **[https://SEU_USUARIO.github.io/show-musical/](https://SEU_USUARIO.github.io/show-musical/)**
 
 ---
