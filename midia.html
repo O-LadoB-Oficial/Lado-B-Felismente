@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>O Lado B Felismente — Mídia</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- META PREVIEW -->
-    <meta property="og:title" content="Mídia — O Lado B Felismente" />
-    <meta
-      property="og:description"
-      content="Galeria com fotos e vídeos do projeto."
-    />
-    <meta property="og:image" content="assets/img/banner1.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://seudominio.com/midia.html" />
-    <link rel="icon" type="image/png" href="assets/img/logo.png" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>O Lado B Felismente — Mídia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <!-- META PREVIEW -->
+  <meta content="Mídia — O Lado B Felismente" property="og:title"/>
+  <meta content="Galeria com fotos e vídeos do projeto." property="og:description"/>
+  <meta content="assets/img/banner1.png" property="og:image"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://seudominio.com/midia.html" property="og:url"/>
+  <link href="assets/img/logo.png" rel="icon" type="image/png"/>
+  <!-- JS -->
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="allpage">
+    <!-- HEADER / NAV (copiado da index.html) -->
     <header class="navbar">
       <div class="nav-inner container">
-        <a class="brand" href="index.html"
-          ><img src="assets/img/logo.png" alt="Logo O Lado B Felismente"
-        /></a>
-        <span class="subtitle">Show & Projeto Musical</span>
-        <button
-          class="nav-toggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span class="bar"></span><span class="bar"></span
-          ><span class="bar"></span>
+        <a aria-label="Ir para a página inicial" class="brand" href="index.html">
+          <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+          <span class="subtitle">Show &amp; Projeto Musical</span>
+        </a>
+        <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
         <nav class="nav-menu">
           <a href="index.html">Início</a>
-          <a href="release.html">Release</a>
-          <a href="midia.html" class="active">Mídia</a>
+          <a href="o-lado-b.html">O Lado B</a>
+          <a class="active" href="midia.html">Mídia</a>
+          <a href="programa.html">Programa</a>
+          <a href="gizelly-em-imagens.html">Gizelly em Imagens</a>
         </nav>
       </div>
     </header>
@@ -49,37 +42,31 @@
       <div class="container">
         <h1>Mídia</h1>
         <p class="lead">Registros dos bastidores, ensaios e apresentações.</p>
-
         <!-- GALERIA -->
-        <!-- TROCAR AQUI: substitua as imagens -->
         <div class="gallery">
-          <img src="assets/img/midia1.jpg" alt="Foto 1" />
-          <img src="assets/img/midia2.jpg" alt="Foto 2" />
-          <img src="assets/img/midia3.jpg" alt="Foto 3" />
-          <img src="assets/img/midia4.jpg" alt="Foto 4" />
+          <img alt="Foto 1" src="assets/img/midia1.jpg"/>
+          <img alt="Foto 2" src="assets/img/midia2.jpg"/>
+          <img alt="Foto 3" src="assets/img/midia3.jpg"/>
+          <img alt="Foto 4" src="assets/img/midia4.jpg"/>
         </div>
-
         <!-- VÍDEO EXTRA -->
-        <!-- TROCAR AQUI: troque o arquivo de vídeo -->
         <div class="video-frame mt-24">
           <video controls>
-            <source src="assets/video/bastidores.mp4" type="video/mp4" />
+            <source src="assets/video/bastidores.mp4" type="video/mp4"/>
           </video>
         </div>
       </div>
     </main>
 
+    <!-- RODAPÉ (copiado da index.html) -->
     <footer class="footer">
       <div class="container footer-grid">
         <div>
-          <img
-            class="footer-logo"
-            src="assets/img/logo.png"
-            alt="Logo O Lado B Felismente"
-          />
+          <img alt="Logo O Lado B Felismente" class="footer-logo" src="assets/img/logo.png" />
           <p class="footer-copy">
             © 2025 — O Lado B Felismente<br />
-            Produção: Deu Certo Produtora
+            Produção: Deu Certo Produtora<br />
+            Este projeto é realizado com recurso do FAC - Distrito Federal<br />
           </p>
         </div>
         <div>
@@ -89,29 +76,32 @@
             <li>📧 contato@felismente.com</li>
             <li>
               📱
-              <a
-                href="https://instagram.com/gizellydisousa"
-                target="_blank"
-                rel="noopener"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              ▶️
-              <a href="https://youtube.com/" target="_blank" rel="noopener"
-                >YouTube</a
-              >
+              <a href="https://instagram.com/gizellydisousa" rel="noopener" target="_blank">Instagram</a>
             </li>
           </ul>
         </div>
         <div>
           <h4>Links</h4>
           <ul class="footer-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="release.html">Release</a></li>
+            <a href="index.html">Início</a>
+            <a href="o-lado-b.html">O Lado B</a>
+            <a class="active" href="midia.html">Mídia</a>
+            <a href="programa.html">Programa</a>
+            <a href="gizelly-em-imagens.html">Gizelly em Imagens</a>
           </ul>
+          <div class="footer-apoio">
+            <h4>Apoio</h4>
+            <article class="card3">
+              <img alt="Apoio" src="assets/img/fundo3.png" />
+            </article>
+          </div>
         </div>
       </div>
+      <p class="footer-credits">
+        Créditos: Gizelly (Autora) •
+        <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (dev)</a>
+      </p>
     </footer>
-  </body>
+  </div>
+</body>
 </html>

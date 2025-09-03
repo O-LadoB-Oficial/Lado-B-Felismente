@@ -1,35 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>O Lado B Felismente — Início</title>
-
     <!-- FONTE -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap"
       rel="stylesheet"
     />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
+    <link href="assets/css/style.css" rel="stylesheet" />
     <!-- META PREVIEW (thumbnail ao compartilhar) -->
     <!-- TROCAR AQUI se quiser outro título/descrição/imagem -->
-    <meta property="og:title" content="O Lado B Felismente - Show Musical" />
+    <meta content="O Lado B Felismente - Show Musical" property="og:title" />
     <meta
-      property="og:description"
       content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna."
+      property="og:description"
     />
-    <meta property="og:image" content="assets/img/banner1.png" />
+    <meta content="assets/img/banner1.png" property="og:image" />
     <!-- usa seu banner -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://seudominio.com" />
-    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <meta content="website" property="og:type" />
+    <meta content="https://seudominio.com" property="og:url" />
+    <link href="assets/img/logo.png" rel="icon" type="image/png" />
     <!-- sua logo -->
-
     <!-- JS -->
-    <script defer src="js/scripts.js"></script>
+    <script defer="" src="js/scripts.js"></script>
   </head>
   <body>
     <!-- HEADER / NAV -->
@@ -37,34 +34,33 @@
       <header class="navbar">
         <div class="nav-inner container">
           <a
+            aria-label="Ir para a página inicial"
             class="brand"
             href="index.html"
-            aria-label="Ir para a página inicial"
           >
             <!-- TROCAR AQUI: caminho/logo -->
-            <img src="assets/img/logo.png" alt="Logo O Lado B Felismente" />
-            <span class="subtitle">Show & Projeto Musical</span>
+            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+            <span class="subtitle">Show &amp; Projeto Musical</span>
           </a>
-
           <button
-            class="nav-toggle"
-            aria-label="Abrir menu"
             aria-expanded="false"
+            aria-label="Abrir menu"
+            class="nav-toggle"
           >
             <span class="bar"></span><span class="bar"></span
             ><span class="bar"></span>
           </button>
-
           <nav class="nav-menu">
-            <a href="index.html" class="active">Início</a>
-            <a href="release.html">Release</a>
-            <a href="midia.html">Mídia</a>
+            <a class="active" href="index.html">Início</a>
+            <li><a href="o-lado-b.html">O Lado B</a></li>
+            <li><a href="midia.html">Mídia</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
           </nav>
         </div>
       </header>
-
       <!-- HERO com banner de fundo -->
-      <section class="hero" role="banner" aria-label="Apresentação do projeto">
+      <section aria-label="Apresentação do projeto" class="hero" role="banner">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <h1>O Lado B - F(Elis)mente</h1>
@@ -74,82 +70,76 @@
             contemporâneos e uma experiência que convida o público a “virar o
             disco” e descobrir joias escondidas do nosso repertório.
           </p>
-
           <!-- TROCAR AQUI: vídeo principal (orientação retrato) e poster/capa -->
           <div class="video-frame">
-            <video controls playsinline poster="assets/img/banner1.png">
+            <video controls="" playsinline="" poster="assets/img/banner1.png">
               <source src="assets/video/gih-v1.mp4" type="video/mp4" />
               Seu navegador não suporta vídeo HTML5.
             </video>
           </div>
-
-          <a href="release.html" class="btn btn-primary"
+          <a class="btn btn-primary" href="release.html"
             >Ver Release Completo</a
           >
         </div>
         <!-- TROCAR AQUI: imagem de fundo do hero em CSS -> --hero-bg -->
       </section>
-
       <!-- ARTISTAS -->
-      <section id="artistas" class="section">
+      <section class="section" id="artistas">
         <div class="container">
           <h2 class="section-title">Artistas</h2>
-
           <div class="cards">
             <!-- TROCAR AQUI: imagens/títulos e descrições dentro dos modais correspondentes -->
             <article class="card" data-modal="gizelly">
               <img
-                src="assets/img/musicos/gizelly.png"
                 alt="Gizelly di Sousa"
+                src="assets/img/musicos/gizelly.png"
               />
               <h3>Gizelly di Sousa</h3>
             </article>
             <article class="card" data-modal="kadu">
-              <img src="assets/img/musicos/kadu.png" alt="Kadu Araújo" />
+              <img alt="Kadu Araújo" src="assets/img/musicos/kadu.png" />
               <h3>Kadu Araújo</h3>
             </article>
             <article class="card" data-modal="daniel">
-              <img src="assets/img/musicos/daniel.png" alt="Daniel Baker" />
+              <img alt="Daniel Baker" src="assets/img/musicos/daniel.png" />
               <h3>Daniel Baker</h3>
             </article>
             <article class="card" data-modal="paulo">
-              <img src="assets/img/musicos/paulo.png" alt="Paulo Dantas" />
+              <img alt="Paulo Dantas" src="assets/img/musicos/paulo.png" />
               <h3>Paulo Dantas</h3>
             </article>
             <article class="card" data-modal="samuel">
-              <img src="assets/img/musicos/samuel.png" alt="Samuel Daniel" />
+              <img alt="Samuel Daniel" src="assets/img/musicos/samuel.png" />
               <h3>Samuel Daniel</h3>
             </article>
             <article class="card" data-modal="sandro">
-              <img src="assets/img/musicos/sandro.png" alt="Sandro De Souza" />
+              <img alt="Sandro De Souza" src="assets/img/musicos/sandro.png" />
               <h3>Sandro De Souza</h3>
             </article>
             <article class="card" data-modal="naty">
-              <img src="assets/img/musicos/naty.png" alt="Naty Quiroga" />
+              <img alt="Naty Quiroga" src="assets/img/musicos/naty.png" />
               <h3>Naty Quiroga</h3>
             </article>
             <article class="card" data-modal="marressa">
-              <img src="assets/img/musicos/maressa.png" alt="Maressa Omena" />
+              <img alt="Maressa Omena" src="assets/img/musicos/maressa.png" />
               <h3>Maressa Omena</h3>
+            </article>
           </div>
         </div>
       </section>
-
       <!-- PRODUTORES -->
-      <section id="produtores" class="section-alt">
+      <section class="section-alt" id="produtores">
         <div class="container">
           <h2 class="section-title">Produção e Direção</h2>
-
           <div class="cards">
             <article class="card2" data-modal="luciano">
-              <img src="assets/img/equipe/luciano.png" alt="Luciano Monteiro" />
+              <img alt="Luciano Monteiro" src="assets/img/equipe/luciano.png" />
               <h3>Luciano Monteiro</h3>
             </article>
-
             <article class="card2" data-modal="marizan">
               <img
-                src="assets/img/equipe/marizan.png"
                 alt="Marizan Fontinele"
+                src="assets/img/equipe/marizan.png"
               />
               <h3>Marizan Fontinele</h3>
             </article>
@@ -157,44 +147,63 @@
         </div>
       </section>
       <!-- SERVIÇO / AGENDA -->
-      <section id="agenda" class="section2section-alt">
+      <section class="section2section-alt" id="agenda">
         <div class="container">
-            <h2 class="section-title">Agenda de Eventos</h2>
-            
-            <div class="agenda-card">
-                <ul class="agenda-list">
-                    <li>
-                        <strong>13/09/2025</strong> — 
-                        <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i> Casa do Cantador 🔗
-                        </a>, Ceilândia — 20h
-                    </li>
-                    <li>
-                        <strong>26/09/2025</strong> — 
-                        <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-2/3059775?referrer=www.google.com" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
-                        </a> — 20h
-                    </li>
-                    <li>
-                        <strong>03/10/2025</strong> — 
-                        <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-3/3090463" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
-                        </a> — 20h
-                    </li>
-                    <li>
-                        <strong>🎟️ Entrada gratuita </strong> — 
-                        <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i> Ingressos no Sympla🔗
-                </ul>
-            </div>
+          <h2 class="section-title">Agenda de Eventos</h2>
+          <div class="agenda-card">
+            <ul class="agenda-list">
+              <li>
+                <strong>13/09/2025</strong> —
+                <a
+                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207"
+                  target="_blank"
+                >
+                  <i class="fas fa-map-marker-alt"></i> Casa do Cantador 🔗 </a
+                >, Ceilândia — 20h<br>Haverá exposições, brechós, livros e gastronomia local a partir
+              das 16h
+              </li>
+              <li>
+                <strong>26/09/2025</strong> —
+                <a
+                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-2/3059775?referrer=www.google.com"
+                  target="_blank"
+                >
+                  <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
+                </a>
+                — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>Haverá exposições, brechós, livros e gastronomia local a partir
+              das 16h
+              </li>
+              <li>
+                <strong>03/10/2025</strong> —
+                <a
+                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-3/3090463"
+                  target="_blank"
+                >
+                  <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
+                </a>
+                — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>Haverá exposições, brechós, livros e gastronomia local a partir
+              das 16h
+              </li>
+              <li>
+                <strong>🎟️ Entrada gratuita </strong> —
+                <a
+                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207"
+                  target="_blank"
+                >
+                  <i class="fas fa-map-marker-alt"></i> Ingressos no Sympla🔗
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
-
+      </section>
       <!-- MODAIS DE DESCRIÇÃO (abrem ao clicar nos cards) -->
       <!-- TROCAR AQUI: textos das descrições -->
-      <div class="modal" id="modal-gizelly" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Fechar">&times;</button>
+      <div aria-hidden="true" class="modal" id="modal-gizelly">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <button aria-label="Fechar" class="modal-close" type="button">
+            ×
+          </button>
           <h3>Gizelly di Sousa</h3>
           <p>
             Cantora de voz contundente e presença marcante. Pesquisa repertórios
@@ -202,10 +211,11 @@
           </p>
         </div>
       </div>
-
-      <div class="modal" id="modal-kadu" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Fechar">&times;</button>
+      <div aria-hidden="true" class="modal" id="modal-kadu">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <button aria-label="Fechar" class="modal-close" type="button">
+            ×
+          </button>
           <h3>Kadu Araújo</h3>
           <p>
             Direção musical e arranjos. Cria pontes entre a tradição da MPB e a
@@ -213,10 +223,11 @@
           </p>
         </div>
       </div>
-
-      <div class="modal" id="modal-marizan" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Fechar">&times;</button>
+      <div aria-hidden="true" class="modal" id="modal-marizan">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <button aria-label="Fechar" class="modal-close" type="button">
+            ×
+          </button>
           <h3>Marizan Fontinele</h3>
           <p>
             Produtor executivo. Conecta equipe, logística e visão artística para
@@ -224,10 +235,11 @@
           </p>
         </div>
       </div>
-
-      <div class="modal" id="modal-luciano" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Fechar">&times;</button>
+      <div aria-hidden="true" class="modal" id="modal-luciano">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <button aria-label="Fechar" class="modal-close" type="button">
+            ×
+          </button>
           <h3>Luciano Monteiro</h3>
           <p>
             Produção técnica. Responsável por transformar o conceito do show em
@@ -235,19 +247,18 @@
           </p>
         </div>
       </div>
-
       <!-- RODAPÉ (com contato) -->
       <footer class="footer">
         <div class="container footer-grid">
           <div>
             <img
+              alt="Logo O Lado B Felismente"
               class="footer-logo"
               src="assets/img/logo.png"
-              alt="Logo O Lado B Felismente"
             />
             <p class="footer-copy">
-              © 2025 — O Lado B Felismente<br/>
-              Produção: Deu Certo Produtora<br/>
+              © 2025 — O Lado B Felismente<br />
+              Produção: Deu Certo Produtora<br />
               Este projeto é realizado com recurso do FAC - Distrito Federal<br />
             </p>
           </div>
@@ -261,8 +272,8 @@
                 📱
                 <a
                   href="https://instagram.com/gizellydisousa"
-                  target="_blank"
                   rel="noopener"
+                  target="_blank"
                   >Instagram</a
                 >
               </li>
@@ -271,15 +282,26 @@
           <div>
             <h4>Links</h4>
             <ul class="footer-list">
-              <li><a href="release.html">Release</a></li>
-              <li><a href="midia.html">Mídia</a></li>
+              <a class="active" href="index.html">Início</a>
+            <li><a href="o-lado-b.html">O Lado B</a></li>
+            <a href="midia.html">Mídia</a>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
             </ul>
             <div class="footer-apoio">
-            <h4>Apoio</h4>
-             <article class="card3">
-              <img src="assets/img/fundo3.png" alt="Apoio" />            
+              <h4>Apoio</h4>
+              <article class="card3">
+                <img alt="Apoio" src="assets/img/fundo3.png" />
+              </article>
+            </div>
           </div>
         </div>
+        <p class="footer-credits">
+          Créditos: Gizelly (Autora) •
+          <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank"
+            >Djavan (dev)</a
+          >
+        </p>
       </footer>
     </div>
   </body>

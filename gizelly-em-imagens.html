@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizelly em Imagens — O Lado B F(Elis)mente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page">
+  <header class="navbar">
+  <div class="nav-inner container">
+    <a aria-label="Ir para a página inicial" class="brand" href="index.html">
+      <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+      <span class="subtitle">Show &amp; Projeto Musical</span>
+    </a>
+    <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="nav-menu">
+      <a href="index.html">Início</a>
+      <a href="o-lado-b.html">O Lado B</a>
+      <a href="midia.html">Mídia</a>
+      <a href="programa.html">Programa</a>
+      <a class="active" href="gizelly-em-imagens.html">Gizelly em Imagens</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section-alt">
+  <h1 class="section-title">Gizelly em Imagens</h1>
+  <div class="gallery">
+    <!-- Use as imagens já existentes da pasta assets/img/banner*.png só como exemplo -->
+    <a href="assets/img/banner1.png" class="lightbox"><img src="assets/img/banner1.png" alt="Imagem 1"></a>
+    <a href="assets/img/banner2.png" class="lightbox"><img src="assets/img/banner2.png" alt="Imagem 2"></a>
+    <a href="assets/img/fundo2.png" class="lightbox"><img src="assets/img/fundo2.png" alt="Imagem 3"></a>
+    <a href="assets/img/fundo4.png" class="lightbox"><img src="assets/img/fundo4.png" alt="Imagem 4"></a>
+  </div>
+</section>
+<script>
+// Lightbox leve (sem libs)
+document.querySelectorAll('.lightbox').forEach(a => {
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    const overlay = document.createElement('div');
+    overlay.className = 'lb-overlay';
+    overlay.innerHTML = '<img src="'+this.getAttribute('href')+'" alt="">';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', () => overlay.remove());
+  });
+});
+</script>
+
+    </main>
+   <footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img alt="Logo O Lado B Felismente" class="footer-logo" src="assets/img/logo.png" />
+      <p class="footer-copy">
+        © 2025 — O Lado B Felismente<br />
+        Produção: Deu Certo Produtora<br />
+        Este projeto é realizado com recurso do FAC - Distrito Federal<br />
+      </p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-list">
+        <li>📞 (61) 98471-3178</li>
+        <li>📧 contato@felismente.com</li>
+        <li>
+          📱
+          <a href="https://instagram.com/gizellydisousa" rel="noopener" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul class="footer-list">
+        <a href="index.html">Início</a>
+        <a href="o-lado-b.html">O Lado B</a>
+        <a href="midia.html">Mídia</a>
+        <a href="programa.html">Programa</a>
+        <a class="active" href="gizelly-em-imagens.html">Gizelly em Imagens</a>
+      </ul>
+      <div class="footer-apoio">
+        <h4>Apoio</h4>
+        <article class="card3">
+          <img alt="Apoio" src="assets/img/fundo3.png" />
+        </article>
+      </div>
+    </div>
+  </div>
+  <p class="footer-credits">
+    Créditos: Gizelly (Autora) •
+    <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (dev)</a>
+  </p>
+</footer>
+</body>
+</html>
