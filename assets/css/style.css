@@ -46,6 +46,23 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
+.o-lado-b p,ol{
+color: var(--ring);
+list-style: none;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 80%;
+  background: rgba(0, 0, 0, 0.6); /* Fundo para contraste */
+  border-radius: 10px;
+}
+.o-lado-b {
+  background: url("../img/fundo2.png") no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
 
 /* Containers */
 .container {
@@ -677,8 +694,7 @@ body {
 
 /* Footer Apoio ajustado */
 .footer-apoio {
-  text-align: center;
-  margin-top: 20px;
+
 }
 .footer-apoio .card3 img {
   width: 200px;
