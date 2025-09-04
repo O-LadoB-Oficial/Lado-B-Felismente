@@ -46,9 +46,10 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
-.o-lado-b p,ol{
-color: var(--ring);
-list-style: none;
+
+.o-lado-b p,ol {
+  color: var(--ring);
+  list-style: none;
   padding: 20px;
   margin: 20px auto;
   text-align: center;
@@ -191,7 +192,7 @@ list-style: none;
   transition: transform 0.25s ease;
 }
 
-/* ===== Hero ===== */
+/* Hero */
 .hero {
   min-height: 88vh;
   background: var(--hero-bg) center/cover no-repeat fixed;
@@ -302,8 +303,8 @@ list-style: none;
   object-fit: cover;
   display: block;
 }
-.card2{
-   background: #1d1d22;
+.card2 {
+  background: #1d1d22;
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
@@ -327,8 +328,8 @@ list-style: none;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
   border-color: rgba(255, 255, 255, 0.18);
 }
-.card3{
-   background: #1d1d22;
+.card3 {
+  background: #1d1d22;
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
@@ -350,7 +351,6 @@ list-style: none;
   border-color: rgba(255, 255, 255, 0.18);
 }
   
-
 /* Gallery */
 .gallery {
   display: grid;
@@ -508,7 +508,6 @@ list-style: none;
   color: #fff;
 }
 
-
 /* =======================
    Responsividade extra
 ======================= */
@@ -536,8 +535,7 @@ list-style: none;
   }
 }
 
-
-/* ===== Melhorias responsivas e off-canvas (somente mobile) ===== */
+/* ===== Menu Off-canvas corrigido ===== */
 @media (max-width: 860px) {
   .nav-toggle {
     position: absolute;
@@ -595,14 +593,4 @@ list-style: none;
   header .nav-menu a {
     font-size: 1.05rem;
   }
-
-  /* Grid/cards ajustes */
-  .grid, .cards, .cards2, .cards3 {
-    grid-template-columns: 1fr !important;
-  }
-
-  .agenda-list li {
-    display: block;
-    line-height: 1.5;
-    padding: 8px 0;
-  }
+}

@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Fecha ao clicar em link do menu
+  // Fecha ao clicar em link do menu (e navega normalmente)
   navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeMenu);
+    a.addEventListener('click', () => {
+      closeMenu();
+    });
   });
 
   // Fecha ao clicar fora (overlay)
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Botão voltar do celular fecha o menu
-  window.addEventListener('popstate', (e) => {
+  window.addEventListener('popstate', () => {
     if (navMenu.classList.contains('show')) {
       closeMenu();
     }
