@@ -1,55 +1,28 @@
-// Fechar modal com Esc e bloquear redirecionamentos acidentais
+// ===== Utilidades comuns =====
+
+// Fecha todas as modais com Esc
+function closeAllModals() {
+  document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show'));
+}
+
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show'));
-  }
+  if (e.key === 'Escape') closeAllModals();
 });
 
-document.querySelectorAll('.modal').forEach(m => {
-  m.addEventListener('click', (e) => {
-    // Impede que clique no overlay buraco "atravesse" e acione links por trás
-    e.preventDefault();
-  }, true);
-});
-
-// Fechar menu ao clicar em um link (mobile)
-document.querySelectorAll('.nav-menu a').forEach(a => {
-  a.addEventListener('click', () => {
-    if (navMenu.classList.contains('show')) {
-      navMenu.classList.remove('show');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('offcanvas-open');
-    }
-  });
-});
-
-
-// Garante que cliques dentro do conteúdo do modal não fechem nem redirecionem
-document.querySelectorAll('.modal .modal-content').forEach(el => {
-  el.addEventListener('click', (e)=> { e.stopPropagation(); });
-});
-// Bloqueia redirecionamentos dentro de .modal por engano
-document.querySelectorAll('.modal a').forEach(a => {
-  a.addEventListener('click', (e)=> {
-    e.preventDefault();
-    e.stopPropagation();
-    // Apenas fecha, por solicitação
-    const modal = a.closest('.modal');
-    if (modal) modal.classList.remove('show');
-  });
-});
-
-// Inicializadores reutilizáveis (chame initNav() / initModals() após os partials estarem no DOM)
+// ===== Inicializa Navegação (menu hambúrguer) =====
 function initNav() {
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
   if (!navToggle || !navMenu) return;
+
+  // Abrir/fechar
   navToggle.addEventListener('click', () => {
     const open = navMenu.classList.toggle('show');
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.classList.toggle('offcanvas-open', open);
   });
-  // fechar menu ao clicar em links (mobile)
+
+  // Fechar ao clicar em qualquer link do menu
   navMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       if (navMenu.classList.contains('show')) {
@@ -59,10 +32,21 @@ function initNav() {
       }
     });
   });
+
+  // Garantir estado correto ao redimensionar (ex.: mobile -> desktop)
+  window.addEventListener('resize', () => {
+    const isMobile = window.matchMedia('(max-width: 860px)').matches;
+    if (!isMobile) {
+      navMenu.classList.remove('show');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('offcanvas-open');
+    }
+  });
 }
 
+// ===== Inicializa Modais =====
 function initModals() {
-  // abrir modal a partir dos cards
+  // Abrir modal pelos cards
   document.querySelectorAll('.card[data-modal]').forEach(card => {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-modal');
@@ -71,7 +55,7 @@ function initModals() {
     });
   });
 
-  // fechar ao clicar na overlay (somente quando o target for exatamente o overlay)
+  // Fechar ao clicar na overlay (somente quando o alvo é a própria overlay)
   document.querySelectorAll('.modal').forEach(m => {
     m.addEventListener('click', (e) => {
       if (e.target.classList.contains('modal')) {
@@ -80,7 +64,7 @@ function initModals() {
     });
   });
 
-  // garantir que botões 'X' sempre fechem (não depende de bubbling)
+  // Botões "X" sempre fecham
   document.querySelectorAll('.modal .modal-close').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -89,22 +73,24 @@ function initModals() {
     });
   });
 
-  // prevenir que cliques dentro do conteúdo fechem a modal
+  // Impede que cliques dentro do conteúdo fechem/redirecionem
   document.querySelectorAll('.modal .modal-content').forEach(el => {
-    el.addEventListener('click', (e)=> e.stopPropagation());
+    el.addEventListener('click', (e)=> { e.stopPropagation(); });
   });
 
-  // fechar com Esc
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show'));
-    }
+  // Bloqueia redirecionamento acidental dentro da modal
+  document.querySelectorAll('.modal a').forEach(a => {
+    a.addEventListener('click', (e)=> {
+      e.preventDefault();
+      e.stopPropagation();
+      const modal = a.closest('.modal');
+      if (modal) modal.classList.remove('show');
+    });
   });
 }
 
-// auto-init quando DOM estiver pronto
+// Auto-init quando DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
-  // se os partials já estiverem incorporados (include-partials.js síncrono), as funções vão encontrar os elementos
   initNav();
   initModals();
 });
