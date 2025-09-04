@@ -15,9 +15,9 @@
 }
 
 .allpage {
-  max-width: 1200px; /* largura máxima */
-  margin: 0 auto; /* centraliza */
-  padding: 0 10px; /* respiro lateral */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 :root {
@@ -25,10 +25,10 @@
   --bg-alt: #17171b;
   --text: #f3f3f5;
   --muted: #c9c9d1;
-  --primary: #ff4d5a; /* vermelho coral */
-  --accent: #8e24aa; /* roxo */
-  --ring: #ffe082; /* amarelo suave */
-  --hero-bg: url("../img/banner1.png"); /* TROCAR AQUI se quiser outro banner */
+  --primary: #ff4d5a;
+  --accent: #8e24aa;
+  --ring: #ffe082;
+  --hero-bg: url("../img/banner1.png");
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
@@ -47,14 +47,14 @@ body {
   line-height: 1.6;
 }
 
-.o-lado-b p,ol {
+.pageB p {
   color: var(--ring);
   list-style: none;
   padding: 20px;
   margin: 20px auto;
   text-align: center;
   max-width: 80%;
-  background: rgba(0, 0, 0, 0.6); /* Fundo para contraste */
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
 .o-lado-b {
@@ -65,7 +65,6 @@ body {
   position: relative;
 }
 
-/* Containers */
 .container {
   max-width: 1200px;
   margin-inline: auto;
@@ -102,7 +101,6 @@ body {
   text-align: center;
 }
 
-/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -174,7 +172,6 @@ body {
   color: var(--ring);
 }
 
-/* Toggle (mobile) */
 .nav-toggle {
   display: none;
   background: transparent;
@@ -192,7 +189,6 @@ body {
   transition: transform 0.25s ease;
 }
 
-/* Hero */
 .hero {
   min-height: 88vh;
   background: var(--hero-bg) center/cover no-repeat fixed;
@@ -265,7 +261,6 @@ body {
   margin-top: 24px;
 }
 
-/* Cards */
 .cards {
   background: url("../img/fundo2.png") no-repeat center center/cover;
   background-attachment: fixed;
@@ -329,29 +324,31 @@ body {
   border-color: rgba(255, 255, 255, 0.18);
 }
 .card3 {
-  background: #1d1d22;
+  background: url("assets/img/banner1.png") no-repeat center center/cover;
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease,
-    border-color 0.25s ease;
+              border-color 0.25s ease;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  position: relative;
+  width: 100%;
+  max-width: 225px; /* Aumentei a largura máxima */
+  margin: 0 auto;
+  height: 250px; /* Aumentei a altura */
 }
 .card3 img {
   width: 100%;
-  height: 100px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* Alterado para conter a imagem sem cortar */
   display: block;
-  position: center, absolute;
 }
+
 .card3:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
   border-color: rgba(255, 255, 255, 0.18);
 }
   
-/* Gallery */
 .gallery {
   display: grid;
   gap: 12px;
@@ -370,9 +367,6 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* =======================
-   Agenda (ajustada)
-======================= */
 .agenda-card {
   background: url("../img/banner1.png") no-repeat center center/cover;
   background-attachment: fixed;
@@ -389,7 +383,7 @@ body {
   margin: 20px auto;
   text-align: center;
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.6); /* Fundo para contraste */
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
 .agenda-list a {
@@ -401,7 +395,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 .agenda-list a:hover {
-  background: #ffcc00; /* Destaca link */
+  background: #ffcc00;
   color: #000;
 }
 .agenda-list li {
@@ -426,7 +420,6 @@ body {
   text-decoration: underline;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -463,7 +456,6 @@ body {
   line-height: 1;
 }
 
-/* Footer */
 .footer {
   background: url("../img/fundo4.png") no-repeat center center/cover;
   background-attachment: fixed;
@@ -477,20 +469,46 @@ body {
 }
 .footer-grid {
   display: grid;
-  gap: -1200px;
-  grid-template-columns: repeat(auto-fit, minmax( 20px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-column:nth-child(2) {
+  align-items: center;
+  text-align: center;
+}
+
+.footer-column:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
 .footer-logo {
   height: 44px;
   width: 44px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-left: 20px;
+  margin: 0 auto 15px;
 }
 .footer-copy {
   color: var(--muted);
   font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 .footer-list {
   list-style: none;
@@ -508,9 +526,29 @@ body {
   color: #fff;
 }
 
-/* =======================
-   Responsividade extra
-======================= */
+.footer-credits {
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.footer-apoio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer-apoio h4 {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .agenda-list {
     max-width: 90%;
@@ -522,7 +560,7 @@ body {
   .agenda-note {
     font-size: 1rem;
   }
-}
+
 @media (max-width: 480px) {
   body {
     background-position: top center;
@@ -535,9 +573,10 @@ body {
   }
 }
 
-/* ===== Menu Off-canvas corrigido ===== */
+/* ===== Menu Overlay para mobile ===== */
 @media (max-width: 860px) {
   .nav-toggle {
+    display: block;
     position: absolute;
     right: 16px;
     top: 16px;
@@ -546,51 +585,107 @@ body {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    z-index: 10001;
-  }
-  .nav-toggle .bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    margin: 6px 0;
-    background: #fff;
-    transition: transform .3s ease, opacity .3s ease;
+    z-index: 1001;
   }
 
-  /* Off-canvas lateral */
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -280px; /* escondido por padrão */
-    width: 280px;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,.92);
-    backdrop-filter: blur(2px);
-    padding: 80px 24px 24px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    transition: right .35s ease;
-    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    padding: 80px 24px 24px;
   }
+
   .nav-menu.show {
-    right: 0;
+    opacity: 1;
+    visibility: visible;
   }
 
-  body.offcanvas-open {
-    overflow: hidden;
+  .nav-menu a {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
   }
 
-  /* Overlay */
-  body.offcanvas-open::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.5);
-    z-index: 9998;
+  .nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
-  header .nav-menu a {
-    font-size: 1.05rem;
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
   }
+
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+/* Footer no mobile */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-column:first-child,
+  .footer-column:nth-child(2),
+  .footer-column:last-child {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 15px;
+  }
+  
+  .footer-apoio {
+    margin-top: 20px;
+  }
+}
+
+/* MELHORIAS GERAIS PARA MOBILE */
+@media (max-width: 768px) {
+  .section, .section-alt, .section-narrow {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .lead {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-frame {
+    max-width: 100%;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

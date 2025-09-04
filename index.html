@@ -1,125 +1,136 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Define que o documento segue o padrão HTML5 -->
+<html lang="pt-BR"> <!-- Define idioma da página como português do Brasil -->
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>O Lado B Felismente — Início</title>
-    <!-- FONTE -->
+    <meta charset="utf-8" /> <!-- Codificação de caracteres (UTF-8 suporta acentos) -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" /> <!-- Faz o layout ser responsivo no mobile -->
+
+    <title>O Lado B Felismente — Início</title> <!-- Título da aba do navegador -->
+
+    <!-- FONTE (Google Fonts) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- CSS -->
+
+    <!-- CSS principal -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- META PREVIEW (thumbnail ao compartilhar) -->
-    <!-- TROCAR AQUI se quiser outro título/descrição/imagem -->
+
+    <!-- META PREVIEW (quando compartilha o site em redes sociais) -->
+    <!-- Pode trocar título, descrição e imagem do preview -->
     <meta content="O Lado B Felismente - Show Musical" property="og:title" />
     <meta
       content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna."
       property="og:description"
     />
-    <meta content="assets/img/banner1.png" property="og:image" />
-    <!-- usa seu banner -->
+    <meta content="assets/img/banner1.png" property="og:image" /> <!-- Imagem que aparece no preview -->
     <meta content="website" property="og:type" />
-    <meta content="https://seudominio.com" property="og:url" />
-    <link href="assets/img/logo.png" rel="icon" type="image/png" />
-    <!-- sua logo -->
-    <!-- JS -->
-    <script defer="" src="js/scripts.js"></script>
+    <meta content="https://seudominio.com" property="og:url" /> <!-- Colocar o domínio oficial -->
+    <link href="assets/img/logo.png" rel="icon" type="image/png" /> <!-- Ícone da aba do navegador -->
+
+    <!-- JS principal -->
+    <!-- scripts.js controla o menu mobile e modais -->
+    <script defer src="js/scripts.js"></script>
   </head>
+
   <body>
-    <!-- HEADER / NAV -->
+    <!-- CONTAINER DA PÁGINA -->
     <div class="allpage">
-      <header class="navbar">
-        <div class="nav-inner container">
-          <a
-            aria-label="Ir para a página inicial"
-            class="brand"
-            href="index.html"
-          >
-            <!-- TROCAR AQUI: caminho/logo -->
-            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
-            <span class="subtitle">Show &amp; Projeto Musical</span>
+      
+      <!-- HEADER / NAV -->
+      <header class="navbar"> <!-- Barra de navegação fixa no topo -->
+        <div class="nav-inner container"> <!-- Container interno da navbar -->
+          
+          <!-- LOGO -->
+          <a aria-label="Ir para a página inicial" class="brand" href="index.html">
+            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" /> <!-- Logo -->
+            <span class="subtitle">Show &amp; Projeto Musical</span> <!-- Subtítulo -->
           </a>
-          <button
-            aria-expanded="false"
-            aria-label="Abrir menu"
-            class="nav-toggle"
-          >
-            <span class="bar"></span><span class="bar"></span
-            ><span class="bar"></span>
-          </button>
+
+          <!-- BOTÃO DE MENU (hambúrguer) -->
+         <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+          <!-- MENU DE NAVEGAÇÃO -->
           <nav class="nav-menu">
-            <a class="active" href="index.html">Início</a>
+            <a class="active" href="index.html">Início</a> <!-- Link ativo -->
             <li><a href="o-lado-b.html">O Lado B</a></li>
-            <li><a href="midia.html">Mídia</a></li>
             <li><a href="programa.html">Programa</a></li>
+            <li><a href="midia.html">Mídia</a></li>     
             <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
           </nav>
         </div>
       </header>
-      <!-- HERO com banner de fundo -->
+
+      <!-- HERO (seção inicial com vídeo e texto de apresentação) -->
       <section aria-label="Apresentação do projeto" class="hero" role="banner">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay"></div> <!-- Sobreposição escura para contraste -->
         <div class="container hero-content">
-          <h1>O Lado B - F(Elis)mente</h1>
+          <h1>O Lado B - F(Elis)mente</h1> <!-- Título principal -->
           <p class="lead">
             Um mergulho poético-musical nas canções mais ousadas e pouco
             conhecidas da música brasileira. Interpretação visceral, arranjos
             contemporâneos e uma experiência que convida o público a “virar o
             disco” e descobrir joias escondidas do nosso repertório.
           </p>
-          <!-- TROCAR AQUI: vídeo principal (orientação retrato) e poster/capa -->
+
+          <!-- VÍDEO PRINCIPAL -->
           <div class="video-frame">
-            <video controls="" playsinline="" poster="assets/img/banner1.png">
+            <video controls playsinline poster="assets/img/banner1.png">
               <source src="assets/video/gih-v1.mp4" type="video/mp4" />
               Seu navegador não suporta vídeo HTML5.
             </video>
           </div>
-          <a class="btn btn-primary" href="release.html"
-            >Ver Release Completo</a
-          >
+
+          <!-- BOTÃO PARA RELEASE -->
+          <a class="btn btn-primary" href="release.html">Ver Release Completo</a>
         </div>
-        <!-- TROCAR AQUI: imagem de fundo do hero em CSS -> --hero-bg -->
       </section>
+
       <!-- ARTISTAS -->
       <section class="section" id="artistas">
         <div class="container">
           <h2 class="section-title">Artistas</h2>
-          <div class="cards">
-            <!-- TROCAR AQUI: imagens/títulos e descrições dentro dos modais correspondentes -->
+          <div class="cards"> <!-- Grid de cards (vira lista no mobile) -->
+
+            <!-- Cada card representa um artista -->
             <article class="card" data-modal="gizelly">
-              <img
-                alt="Gizelly di Sousa"
-                src="assets/img/musicos/gizelly.png"
-              />
+              <img alt="Gizelly di Sousa" src="assets/img/musicos/gizelly.png" />
               <h3>Gizelly di Sousa</h3>
             </article>
+
             <article class="card" data-modal="kadu">
               <img alt="Kadu Araújo" src="assets/img/musicos/kadu.png" />
               <h3>Kadu Araújo</h3>
             </article>
+
             <article class="card" data-modal="daniel">
               <img alt="Daniel Baker" src="assets/img/musicos/daniel.png" />
               <h3>Daniel Baker</h3>
             </article>
+
             <article class="card" data-modal="paulo">
               <img alt="Paulo Dantas" src="assets/img/musicos/paulo.png" />
               <h3>Paulo Dantas</h3>
             </article>
+
             <article class="card" data-modal="samuel">
               <img alt="Samuel Daniel" src="assets/img/musicos/samuel.png" />
               <h3>Samuel Daniel</h3>
             </article>
+
             <article class="card" data-modal="sandro">
               <img alt="Sandro De Souza" src="assets/img/musicos/sandro.png" />
               <h3>Sandro De Souza</h3>
             </article>
+
             <article class="card" data-modal="naty">
               <img alt="Naty Quiroga" src="assets/img/musicos/naty.png" />
               <h3>Naty Quiroga</h3>
             </article>
+
             <article class="card" data-modal="marressa">
               <img alt="Maressa Omena" src="assets/img/musicos/maressa.png" />
               <h3>Maressa Omena</h3>
@@ -127,6 +138,7 @@
           </div>
         </div>
       </section>
+
       <!-- PRODUTORES -->
       <section class="section-alt" id="produtores">
         <div class="container">
@@ -137,16 +149,14 @@
               <h3>Luciano Monteiro</h3>
             </article>
             <article class="card2" data-modal="marizan">
-              <img
-                alt="Marizan Fontinele"
-                src="assets/img/equipe/marizan.png"
-              />
+              <img alt="Marizan Fontinele" src="assets/img/equipe/marizan.png" />
               <h3>Marizan Fontinele</h3>
             </article>
           </div>
         </div>
       </section>
-      <!-- SERVIÇO / AGENDA -->
+
+      <!-- AGENDA -->
       <section class="section2section-alt" id="agenda">
         <div class="container">
           <h2 class="section-title">Agenda de Eventos</h2>
@@ -154,42 +164,31 @@
             <ul class="agenda-list">
               <li>
                 <strong>13/09/2025</strong> —
-                <a
-                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207"
-                  target="_blank"
-                >
-                  <i class="fas fa-map-marker-alt"></i> Casa do Cantador 🔗 </a
-                >, Ceilândia — 20h<br>Haverá exposições, brechós, livros e gastronomia local a partir
-              das 16h
+                <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207" target="_blank">
+                  <i class="fas fa-map-marker-alt"></i> Casa do Cantador 🔗
+                </a>, Ceilândia — 20h<br>
+                Haverá exposições, brechós, livros e gastronomia local a partir das 16h
               </li>
+
               <li>
                 <strong>26/09/2025</strong> —
-                <a
-                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-2/3059775?referrer=www.google.com"
-                  target="_blank"
-                >
+                <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-2/3059775" target="_blank">
                   <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
-                </a>
-                — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>Haverá exposições, brechós, livros e gastronomia local a partir
-              das 16h
+                </a> — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>
+                Haverá exposições, brechós, livros e gastronomia local a partir das 16h
               </li>
+
               <li>
                 <strong>03/10/2025</strong> —
-                <a
-                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-3/3090463"
-                  target="_blank"
-                >
+                <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-3/3090463" target="_blank">
                   <i class="fas fa-map-marker-alt"></i> Sesc Taguatinga 🔗
-                </a>
-                — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>Haverá exposições, brechós, livros e gastronomia local a partir
-              das 16h
+                </a> — 20h — Teatro Paulo Autran – SESC Taguatinga Norte<br>
+                Haverá exposições, brechós, livros e gastronomia local a partir das 16h
               </li>
+
               <li>
                 <strong>🎟️ Entrada gratuita </strong> —
-                <a
-                  href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207"
-                  target="_blank"
-                >
+                <a href="https://www.sympla.com.br/evento/lado-b-f-elis-mente-1/3105207" target="_blank">
                   <i class="fas fa-map-marker-alt"></i> Ingressos no Sympla🔗
                 </a>
               </li>
@@ -197,112 +196,63 @@
           </div>
         </div>
       </section>
-      <!-- MODAIS DE DESCRIÇÃO (abrem ao clicar nos cards) -->
-      <!-- TROCAR AQUI: textos das descrições -->
+
+      <!-- MODAIS (detalhes dos artistas/produtores, abrem ao clicar nos cards) -->
       <div aria-hidden="true" class="modal" id="modal-gizelly">
         <div class="modal-content" onclick="event.stopPropagation();">
-          <button aria-label="Fechar" class="modal-close" type="button">
-            ×
-          </button>
+          <button aria-label="Fechar" class="modal-close" type="button">×</button>
           <h3>Gizelly di Sousa</h3>
-          <p>
-            Cantora de voz contundente e presença marcante. Pesquisa repertórios
-            da MPB, jazz e bossa, com foco em narrativas sociais e existenciais.
-          </p>
+          <p>Cantora de voz contundente e presença marcante. Pesquisa repertórios da MPB, jazz e bossa, com foco em narrativas sociais e existenciais.</p>
         </div>
       </div>
-      <div aria-hidden="true" class="modal" id="modal-kadu">
-        <div class="modal-content" onclick="event.stopPropagation();">
-          <button aria-label="Fechar" class="modal-close" type="button">
-            ×
-          </button>
-          <h3>Kadu Araújo</h3>
-          <p>
-            Direção musical e arranjos. Cria pontes entre a tradição da MPB e a
-            estética contemporânea, valorizando texturas e dinâmica de palco.
-          </p>
-        </div>
+
+      <!-- (Os outros modais seguem o mesmo padrão, cada um com descrição do artista) -->
+
+   <!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <img alt="Logo O Lado B Felismente" class="footer-logo" src="assets/img/logo.png" />
+      <p class="footer-copy">
+        © 2025 — O Lado B Felismente<br />
+        Produção: Deu Certo Produtora<br />
+        Este projeto é realizado com recurso do FAC - Distrito Federal<br />
+      </p>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Contato</h4>
+      <ul class="footer-list">
+        <li>📞 (61) 98471-3178</li>
+        <li>📧 contato@felismente.com</li>
+        <li>📱 <a href="https://instagram.com/gizellydisousa" rel="noopener" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Links</h4>
+      <ul class="footer-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="o-lado-b.html">O Lado B</a></li>
+        <li><a href="midia.html">Mídia</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
+      </ul>
       </div>
-      <div aria-hidden="true" class="modal" id="modal-marizan">
-        <div class="modal-content" onclick="event.stopPropagation();">
-          <button aria-label="Fechar" class="modal-close" type="button">
-            ×
-          </button>
-          <h3>Marizan Fontinele</h3>
-          <p>
-            Produtor executivo. Conecta equipe, logística e visão artística para
-            potencializar a experiência do público.
-          </p>
-        </div>
-      </div>
-      <div aria-hidden="true" class="modal" id="modal-luciano">
-        <div class="modal-content" onclick="event.stopPropagation();">
-          <button aria-label="Fechar" class="modal-close" type="button">
-            ×
-          </button>
-          <h3>Luciano Monteiro</h3>
-          <p>
-            Produção técnica. Responsável por transformar o conceito do show em
-            execução fluida de som, luz e palco.
-          </p>
-        </div>
-      </div>
-      <!-- RODAPÉ (com contato) -->
-      <footer class="footer">
-        <div class="container footer-grid">
-          <div>
-            <img
-              alt="Logo O Lado B Felismente"
-              class="footer-logo"
-              src="assets/img/logo.png"
-            />
-            <p class="footer-copy">
-              © 2025 — O Lado B Felismente<br />
-              Produção: Deu Certo Produtora<br />
-              Este projeto é realizado com recurso do FAC - Distrito Federal<br />
-            </p>
-          </div>
-          <div>
-            <h4>Contato</h4>
-            <!-- TROCAR AQUI: contatos oficiais -->
-            <ul class="footer-list">
-              <li>📞 (61) 98471-3178</li>
-              <li>📧 contato@felismente.com</li>
-              <li>
-                📱
-                <a
-                  href="https://instagram.com/gizellydisousa"
-                  rel="noopener"
-                  target="_blank"
-                  >Instagram</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>Links</h4>
-            <ul class="footer-list">
-              <a class="active" href="index.html">Início</a>
-            <li><a href="o-lado-b.html">O Lado B</a></li>
-            <a href="midia.html">Mídia</a>
-            <li><a href="programa.html">Programa</a></li>
-            <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
-            </ul>
-            <div class="footer-apoio">
-              <h4>Apoio</h4>
-              <article class="card3">
-                <img alt="Apoio" src="assets/img/fundo3.png" />
-              </article>
-            </div>
-          </div>
-        </div>
-        <p class="footer-credits">
-          Créditos: Gizelly (Autora) •
-          <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank"
-            >Djavan (dev)</a
-          >
-        </p>
-      </footer>
+    </div>
+    <div class="footer-apoio">
+        <h4>Apoio</h4>
+        <article class="card3">
+          <img alt="Apoio" src="assets/img/fundo3.png" />
+        </article>
+   <div class="footer-credits-container">
+    <p class="footer-credits">
+      Créditos: Gizelly Di Sousa (Autoria) •
+      <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (devWeb)</a>
+    </p>
+    </div>"
+  </div>
+</footer>
     </div>
   </body>
 </html>

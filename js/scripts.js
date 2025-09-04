@@ -1,5 +1,5 @@
 // =============================
-// Navegação Off-canvas (menu mobile)
+// Navegação Overlay (menu mobile)
 // =============================
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
@@ -9,16 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openMenu() {
     navMenu.classList.add('show');
+    navToggle.classList.add('active');
     navToggle.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('offcanvas-open');
-    history.pushState({ menu: true }, ""); // adiciona histórico para botão voltar
+    document.body.classList.add('no-scroll');
+    history.pushState({ menu: true }, "");
   }
 
   function closeMenu() {
     if (navMenu.classList.contains('show')) {
       navMenu.classList.remove('show');
+      navToggle.classList.remove('active');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('offcanvas-open');
+      document.body.classList.remove('no-scroll');
     }
   }
 
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fecha ao clicar fora (overlay)
   document.addEventListener('click', (e) => {
-    if (document.body.classList.contains('offcanvas-open') &&
+    if (document.body.classList.contains('no-scroll') &&
         !navMenu.contains(e.target) &&
         !navToggle.contains(e.target)) {
       closeMenu();
