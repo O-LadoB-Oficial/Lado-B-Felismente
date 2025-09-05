@@ -1,87 +1,107 @@
-<!DOCTYPE html> <!-- Documento segue padrão HTML5 -->
-<html lang="pt-BR"> <!-- Define idioma para português do Brasil -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>O Lado B Felismente — Programa</title>
 
-<head>
-  <meta charset="UTF-8" /> <!-- Suporte a caracteres especiais (acentos, etc.) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsividade no mobile -->
-  <title>Programa — O Lado B F(Elis)mente</title> <!-- Título da aba do navegador -->
+    <!-- FONTE (Google Fonts) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonte usada no projeto (Poppins do Google Fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- CSS principal do site -->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <!-- META PREVIEW -->
+    <meta content="O Lado B Felismente - Programa" property="og:title" />
+    <meta
+      content="Programação detalhada dos shows do O Lado B Felismente."
+      property="og:description"
+    />
+    <meta content="assets/img/banner1.png" property="og:image" />
+    <meta content="website" property="og:type" />
+    <meta content="https://seudominio.com" property="og:url" />
+    <link href="assets/img/logo.png" rel="icon" type="image/png" />
 
-  <!-- HEADER / NAV -->
-      <header class="navbar"> <!-- Barra de navegação fixa no topo -->
-        <div class="nav-inner container"> <!-- Container interno da navbar -->
+    <!-- JS principal -->
+    <script defer src="js/scripts.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DA PÁGINA -->
+    <div class="allpage">
+      
+      <!-- HEADER / NAV -->
+      <header class="navbar">
+        <div class="nav-inner container">
           
           <!-- LOGO -->
           <a aria-label="Ir para a página inicial" class="brand" href="index.html">
-            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" /> <!-- Logo -->
-            <span class="subtitle">Show &amp; Projeto Musical</span> <!-- Subtítulo -->
+            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+            <span class="subtitle">Show &amp; Projeto Musical</span>
           </a>
 
           <!-- BOTÃO DE MENU (hambúrguer) -->
-         <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+          <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
 
-    <!-- MENU PRINCIPAL -->
-    <nav class="nav-menu">
-      <a href="index.html">Início</a>
-      <li><a href="o-lado-b.html">O Lado B</a></li>
-      <li><a class="active" href="programa.html">Programa</a></li> <!-- Página atual -->
-      <li><a href="midia.html">Mídia</a></li>     
-      <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
-    </nav>
-  </div>
-</header>
+          <!-- MENU DE NAVEGAÇÃO (mantendo as tags <li> como solicitado) -->
+          <nav class="nav-menu">
+            <a href="index.html">Início</a>
+            <li><a href="o-lado-b.html">O Lado B</a></li>
+            <li><a class="active" href="programa.html">Programa</a></li>
+            <li><a href="midia.html">Mídia</a></li>     
+            <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
+          </nav>
+        </div>
+      </header>
 
-<body>
-  <div class="page"> <!-- Container geral da página -->
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main>
+        <!-- SEÇÃO PROGRAMAÇÃO -->
+        <section class="section-alt">
+          <h1 class="section-title">Programa</h1>
+          <p>Programação detalhada de cada show no dia do evento.</p>
 
-    <!-- SEÇÃO PROGRAMAÇÃO -->
-    <section class="section-alt">
-      <h1 class="section-title">Programa</h1> <!-- Título principal da página -->
-      <p>Programação detalhada de cada show no dia do evento.</p> <!-- Parágrafo (ficará amarelo pelo CSS global) -->
+          <!-- BLOCO DE EVENTO -->
+          <article class="agenda-card">
+            <h1 class="section-title">Ceilândia — Casa do Cantador <br>(13/09/2025)</h1>
+            <ul style="color: var(--ring);" class="agenda-list">
+              <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
+              <li>19:30 — Recepção do público</li>
+              <li>20:00 — Início do show "O Lado B F(Elis)mente – 1ª Edição"</li>
+              <li>21:30 — Encerramento</li>
+            </ul>
+          </article>
 
-      <!-- BLOCO DE EVENTO -->
-      <article class="agenda-card"> <!-- Card de programação -->
-        <h1 class="section-title">Ceilândia — Casa do Cantador <br>(13/09/2025)</h1>
-        <ul style="color: var(--ring);" class="agenda-list"> <!-- Lista com horários -->
-          <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
-          <li>19:30 — Recepção do público</li>
-          <li>20:00 — Início do show “O Lado B F(Elis)mente – 1ª Edição”</li>
-          <li>21:30 — Encerramento</li>
-        </ul>
-      </article>
+          <!-- OUTRO BLOCO DE EVENTO -->
+          <article class="agenda-card">
+            <h1 class="section-title">Taguatinga — Teatro Paulo Autran – SESC Taguatinga Norte <br>(26/09/2025)</h1>
+            <ul style="color: var(--ring);" class="agenda-list">
+              <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
+              <li>19:30 — Recepção do público</li>
+              <li>20:00 — Início do show</li>
+              <li>21:30 — Encerramento</li>
+            </ul>
+          </article>
 
-      <!-- OUTRO BLOCO DE EVENTO -->
-      <article class="agenda-card">
-        <h1 class="section-title">Taguatinga — Teatro Paulo Autran – SESC Taguatinga Norte <br>(26/09/2025)</h1>
-        <ul style="color: var(--ring);" class="agenda-list">
-          <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
-          <li>19:30 — Recepção do público</li>
-          <li>20:00 — Início do show</li>
-          <li>21:30 — Encerramento</li>
-        </ul>
-      </article>
-
-      <!-- MAIS UM BLOCO DE EVENTO -->
-      <article class="agenda-card">
-        <h1 class="section-title">Taguatinga — Teatro Paulo Autran – SESC Taguatinga Norte <br>(03/10/2025)</h1>
-        <ul style="color: var(--ring);" class="agenda-list">
-          <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
-          <li>19:30 — Recepção do público</li>
-          <li>20:00 — Início do show</li>
-          <li>21:30 — Encerramento</li>
-        </ul>
-      </article>
-    </section>
+          <!-- MAIS UM BLOCO DE EVENTO -->
+          <article class="agenda-card">
+            <h1 class="section-title">Taguatinga — Teatro Paulo Autran – SESC Taguatinga Norte <br>(03/10/2025)</h1>
+            <ul style="color: var(--ring);" class="agenda-list">
+              <li>16:00 — Abertura do espaço (exposições, brechó, gastronomia local)</li>
+              <li>19:30 — Recepção do público</li>
+              <li>20:00 — Início do show</li>
+              <li>21:30 — Encerramento</li>
+            </ul>
+          </article>
+        </section>
+      </main>
 
      <!-- FOOTER -->
 <footer class="footer">
