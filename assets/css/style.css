@@ -550,6 +550,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .card img {
+    height: 250px; /* Altura reduzida para mobile */
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+  }
+  
+  .card2 img {
+    height: 400px; /* Altura reduzida para mobile */
+    object-fit: cover;
+  }
   .agenda-list {
     max-width: 90%;
     padding: 15px;
@@ -639,6 +648,10 @@ body {
 
 /* Footer no mobile */
 @media (max-width: 768px) {
+  .footer {
+    background: url("../img/fundo4.png") no-repeat center center/cover;
+    background-attachment: scroll;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
