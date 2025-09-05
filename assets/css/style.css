@@ -457,15 +457,14 @@ body {
 }
 
 .footer {
-  background: url("../img/fundo4.png") no-repeat center center/cover;
+  background: url("../img/banner2.png") no-repeat center center/cover;
   background-attachment: fixed;
   color: #fff;
-  padding: 2rem;
+  padding: 26px 0 28px;
   text-align: center;
   font-size: 0.9rem;
   position: relative;
   border-top: 1px solid rgba(252, 239, 239, 0.08);
-  padding: 26px 0 28px;
 }
 .footer-grid {
   display: grid;
@@ -516,6 +515,7 @@ body {
   margin: 10px 0 0;
 }
 .footer-list li {
+  font-size: 1.0rem;
   margin: 6px 0;
 }
 .footer a {
@@ -560,7 +560,7 @@ body {
   .agenda-note {
     font-size: 1rem;
   }
-
+}
 @media (max-width: 480px) {
   body {
     background-position: top center;
