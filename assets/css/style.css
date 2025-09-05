@@ -551,7 +551,7 @@ body {
 
 @media (max-width: 768px) {
   .card img {
-    height: 250px; /* Altura reduzida para mobile */
+    height: 400px; /* Altura reduzida para mobile */
     object-fit: cover; /* Garante que a imagem preencha o espaço */
   }
   
