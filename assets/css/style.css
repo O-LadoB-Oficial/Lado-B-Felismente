@@ -555,6 +555,7 @@ body {
     object-fit: cover; /* Garante que a imagem preencha o espaço */
   }
   
+  
   .card2 img {
     height: 400px; /* Altura reduzida para mobile */
     object-fit: cover;
@@ -572,6 +573,7 @@ body {
 }
 @media (max-width: 480px) {
   body {
+    background: url("../img/fundo2.png") no-repeat top center/cover;
     background-position: top center;
   }
   .agenda-list li {
