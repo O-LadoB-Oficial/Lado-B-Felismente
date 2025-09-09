@@ -1,89 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" /> <!-- Codificação de caracteres (UTF-8 suporta acentos) -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" /> <!-- Faz o layout ser responsivo no mobile -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <title>O Lado B Felismente — Início</title> <!-- Título da aba do navegador -->
+    <title>O Lado B Felismente — Início</title>
 
     <!-- FONTE (Google Fonts) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"/>
 
     <!-- CSS principal -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- META PREVIEW (quando compartilha o site em redes sociais) -->
-    <!-- Pode trocar título, descrição e imagem do preview -->
+    <!-- META PREVIEW -->
     <meta content="O Lado B Felismente - Show Musical" property="og:title" />
-    <meta
-      content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna."
-      property="og:description"
-    />
-    <meta content="assets/img/banner1.png" property="og:image" /> <!-- Imagem que aparece no preview -->
+    <meta content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna." property="og:description"/>
+    <meta content="assets/img/banner1.png" property="og:image" />
     <meta content="website" property="og:type" />
-    <meta content="https://seudominio.com" property="og:url" /> <!-- Colocar o domínio oficial -->
-    <link href="assets/img/logo.png" rel="icon" type="image/png" /> <!-- Ícone da aba do navegador -->
+    <meta content="https://seudominio.com" property="og:url" />
+    <link href="assets/img/logo.png" rel="icon" type="image/png" />
 
     <!-- JS principal -->
-    <!-- scripts.js controla o menu mobile e modais -->
     <script defer src="js/scripts.js"></script>
-  </head>
+</head>
 <body>
   <div class="page">
   <!-- HEADER / NAV -->
-      <header class="navbar"> <!-- Barra de navegação fixa no topo -->
-        <div class="nav-inner container"> <!-- Container interno da navbar -->
-          
-          <!-- LOGO -->
-          <a aria-label="Ir para a página inicial" class="brand" href="index.html">
-            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" /> <!-- Logo -->
-            <span class="subtitle">Show &amp; Projeto Musical</span> <!-- Subtítulo -->
-          </a>
+  <header class="navbar">
+    <div class="nav-inner container">
+      <a aria-label="Ir para a página inicial" class="brand" href="index.html">
+        <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+        <span class="subtitle">Show & Projeto Musical</span>
+      </a>
 
-          <!-- BOTÃO DE MENU (hambúrguer) -->
-         <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <nav class="nav-menu">
-       <a href="index.html">Início</a>
-            <li><a href="o-lado-b.html">O Lado B</a></li>
-             <li><a href="programa.html">Programa</a></li>
-            <li><a href="midia.html">Mídia</a></li>     
-            <li><a class="active" href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
-    </nav>
-  </div>
-</header>
+      <!-- BOTÃO DE MENU -->
+      <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="index.html">Início</a>
+        <li><a href="o-lado-b.html">O Lado B</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="midia.html">Mídia</a></li>
+        <li><a class="active" href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
+      </nav>
+    </div>
+  </header>
 
-<section class="section-alt">
-  <h1 class="section-title">Gizelly em Imagens</h1>
-  <div class="gallery">
-    <!-- Use as imagens já existentes da pasta assets/img/banner*.png só como exemplo -->
-    <a href="assets/img/gi/gi1.jpg" class="lightbox"><img src="assets/img/gi/gi1.jpg" alt="Imagem 1"></a>
-    <a href="assets/img/gi/gi2.jpg" class="lightbox"><img src="assets/img/gi/gi2.jpg" alt="Imagem 2"></a>
-    <a href="assets/img/gi/gi3.jpg" class="lightbox"><img src="assets/img/gi/gi3.jpg" alt="Imagem 3"></a>
-    <a href="assets/img/gi/gi4.jpg" class="lightbox"><img src="assets/img/gi/gi4.jpg" alt="Imagem 4"></a>
-  </div>
-</section>
-<script>
-// Lightbox leve (sem libs)
-document.querySelectorAll('.lightbox').forEach(a => {
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    const overlay = document.createElement('div');
-    overlay.className = 'lb-overlay';
-    overlay.innerHTML = '<img src="'+this.getAttribute('href')+'" alt="">';
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', () => overlay.remove());
-  });
-});
-</script>
-
-    </main>
+  <section class="section-alt">
+    <h1 class="section-title">Gizelly em Imagens</h1>
+    <div class="gallery">
+      <a href="assets/img/gi/gi1.jpg" class="lightbox"><img src="assets/img/gi/gi1.jpg" alt="Imagem 1"></a>
+      <a href="assets/img/gi/gi2.jpg" class="lightbox"><img src="assets/img/gi/gi2.jpg" alt="Imagem 2"></a>
+      <a href="assets/img/gi/gi3.jpg" class="lightbox"><img src="assets/img/gi/gi3.jpg" alt="Imagem 3"></a>
+      <a href="assets/img/gi/gi4.jpg" class="lightbox"><img src="assets/img/gi/gi4.jpg" alt="Imagem 4"></a>
+    </div>
+  </section>
     <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-grid">
@@ -114,21 +88,22 @@ document.querySelectorAll('.lightbox').forEach(a => {
         <li><a href="midia.html">Mídia</a></li>
         <li><a class="active" href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
       </ul>
-      </div>
     </div>
-    <div class="footer-apoio">
-        <h4>Apoio</h4>
-        <article class="card3">
-          <img alt="Apoio" src="assets/img/fundo3.png" />
-        </article>
-   <div class="footer-credits-container">
-    <p class="footer-credits">
-      Créditos: Gizelly Di Sousa (Autoria) •
-      <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (devWeb)</a>
-    </p>
-    </div>"
+  </div>
+
+  <div class="footer-apoio">
+    <h4>Apoio</h4>
+    <article class="card3">
+      <img alt="Apoio" src="assets/img/fundo3.png" />
+    </article>
+    <div class="footer-credits-container">
+      <p class="footer-credits">
+        Créditos: Gizelly Di Sousa (Autoria) •
+        <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (devWeb)</a>
+      </p>
+    </div>
   </div>
 </footer>
-    </div>
-  </body>
+</div>
+</body>
 </html>

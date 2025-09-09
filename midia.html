@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" /> <!-- Codificação de caracteres (UTF-8 suporta acentos) -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" /> <!-- Faz o layout ser responsivo no mobile -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <title>O Lado B Felismente — Início</title> <!-- Título da aba do navegador -->
+    <title>O Lado B Felismente — Início</title>
 
     <!-- FONTE (Google Fonts) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"/>
 
     <!-- CSS principal -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- META PREVIEW (quando compartilha o site em redes sociais) -->
-    <!-- Pode trocar título, descrição e imagem do preview -->
+    <!-- META PREVIEW -->
     <meta content="O Lado B Felismente - Show Musical" property="og:title" />
-    <meta
-      content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna."
-      property="og:description"
-    />
-    <meta content="assets/img/banner1.png" property="og:image" /> <!-- Imagem que aparece no preview -->
+    <meta content="Um mergulho poético-musical nas canções mais ousadas e pouco conhecidas da música brasileira, com interpretação visceral e moderna." property="og:description"/>
+    <meta content="assets/img/banner1.png" property="og:image" />
     <meta content="website" property="og:type" />
-    <meta content="https://seudominio.com" property="og:url" /> <!-- Colocar o domínio oficial -->
-    <link href="assets/img/logo.png" rel="icon" type="image/png" /> <!-- Ícone da aba do navegador -->
+    <meta content="https://seudominio.com" property="og:url" />
+    <link href="assets/img/logo.png" rel="icon" type="image/png" />
 
     <!-- JS principal -->
-    <!-- scripts.js controla o menu mobile e modais -->
     <script defer src="js/scripts.js"></script>
-  </head>
+</head>
 <body>
   <div class="allpage">
-     <!-- HEADER / NAV -->
-      <header class="navbar"> <!-- Barra de navegação fixa no topo -->
-        <div class="nav-inner container"> <!-- Container interno da navbar -->
-          
-          <!-- LOGO -->
-          <a aria-label="Ir para a página inicial" class="brand" href="index.html">
-            <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" /> <!-- Logo -->
-            <span class="subtitle">Show &amp; Projeto Musical</span> <!-- Subtítulo -->
-          </a>
+  <!-- HEADER / NAV -->
+  <header class="navbar">
+    <div class="nav-inner container">
+      <a aria-label="Ir para a página inicial" class="brand" href="index.html">
+        <img alt="Logo O Lado B Felismente" src="assets/img/logo.png" />
+        <span class="subtitle">Show & Projeto Musical</span>
+      </a>
 
-          <!-- BOTÃO DE MENU (hambúrguer) -->
-         <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-        <nav class="nav-menu">
-          <a href="index.html">Início</a>
-         <li><a href="o-lado-b.html">O Lado B</a></li>
-          <li><a href="programa.html">Programa</a></li>
-          <li><a class="active" href="midia.html">Mídia</a></li>
-         <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
-        </nav>
+      <!-- BOTÃO DE MENU -->
+      <button aria-expanded="false" aria-label="Abrir menu" class="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="index.html">Início</a>
+        <li><a href="o-lado-b.html">O Lado B</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li><a class="active" href="midia.html">Mídia</a></li>
+        <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Bastidores</h1>
+      <p style="text-align:center;" class="lead">Registros dos bastidores, ensaios e apresentações.</p>
+
+      <!-- GALERIA -->
+      <div class="gallery">
+        <a href="assets/img/bastidores/bastgi.jpg" class="lightbox"><img alt="Foto 1" src="assets/img/bastidores/bastgi.jpg"/></a>
+        <a href="assets/img/bastidores/bastikadu.jpg" class="lightbox"><img alt="Foto 2" src="assets/img/bastidores/bastikadu.jpg"/></a>
+        <a href="assets/img/bastidores/bastidaniel.jpg" class="lightbox"><img alt="Foto 3" src="assets/img/bastidores/bastidaniel.jpg"/></a>
+        <a href="assets/img/bastidores/bastipaulo.jpg" class="lightbox"><img alt="Foto 4" src="assets/img/bastidores/bastipaulo.jpg"/></a>
+        <a href="assets/img/bastidores/bastisandro.jpg" class="lightbox"><img alt="Foto 5" src="assets/img/bastidores/bastisandro.jpg"/></a>
       </div>
-    </header>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="section-title">Bastidores</h1>
-        <p style="text-align:center ;" class="lead">Registros dos bastidores, ensaios e apresentações.</p>
-        <!-- GALERIA -->
-        <div class="gallery">
-          <img alt="Foto 1" src="assets/img/bastidores/bastgi.jpg"/>
-          <img alt="Foto 2" src="assets/img/bastidores/bastikadu.jpg"/>
-          <img alt="Foto 3" src="assets/img/bastidores/bastidaniel.jpg"/>
-          <img alt="Foto 4" src="assets/img/bastidores/bastipaulo.jpg"/>
-          <img alt="Foto 5" src="assets/img/bastidores/bastisandro.jpg"/>
-        </div>
-        <!-- VÍDEO EXTRA -->
-        <div class="video-frame mt-24">
-          <video controls>
-            <source src="assets/video/midia/bastivi1.mp4" type="video/mp4"/>
-          </video>
-        </div>
-        <div class="gallery">
-          <img alt="Foto 1" src="assets/img/bastidores/bastkaty.jpg"/>
-          <img alt="Foto 2" src="assets/img/bastidores/basti4.jpg"/>
-          <img alt="Foto 3" src="assets/img/bastidores/gimeme.jpg"/>
-          <img alt="Foto 4" src="assets/img/bastidores/basti5.jpeg"/>
-          <img alt="Foto 5" src="assets/img/bastidores/basti6.jpeg"/>
-        </div>
+      <!-- VÍDEO EXTRA -->
+      <div class="video-frame mt-24">
+        <video controls>
+          <source src="assets/video/midia/bastivi1.mp4" type="video/mp4"/>
+        </video>
       </div>
-    </main>
 
-    <!-- RODAPÉ (copiado da index.html) -->
-    <!-- FOOTER -->
+      <div class="gallery">
+        <a href="assets/img/bastidores/bastkaty.jpg" class="lightbox"><img alt="Foto 1" src="assets/img/bastidores/bastkaty.jpg"/></a>
+        <a href="assets/img/bastidores/basti4.jpg" class="lightbox"><img alt="Foto 2" src="assets/img/bastidores/basti4.jpg"/></a>
+        <a href="assets/img/bastidores/gimeme.jpg" class="lightbox"><img alt="Foto 3" src="assets/img/bastidores/gimeme.jpg"/></a>
+        <a href="assets/img/bastidores/basti5.jpeg" class="lightbox"><img alt="Foto 4" src="assets/img/bastidores/basti5.jpeg"/></a>
+        <a href="assets/img/bastidores/basti6.jpeg" class="lightbox"><img alt="Foto 5" src="assets/img/bastidores/basti6.jpeg"/></a>
+      </div>
+    </div>
+  </main>
+  <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-column">
@@ -118,21 +109,22 @@
         <li><a class="active" href="midia.html">Mídia</a></li>
         <li><a href="gizelly-em-imagens.html">Gizelly em Imagens</a></li>
       </ul>
-      </div>
     </div>
-    <div class="footer-apoio">
-        <h4>Apoio</h4>
-        <article class="card3">
-          <img alt="Apoio" src="assets/img/fundo3.png" />
-        </article>
-   <div class="footer-credits-container">
-    <p class="footer-credits">
-      Créditos: Gizelly Di Sousa (Autoria) •
-      <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (devWeb)</a>
-    </p>
-    </div>"
+  </div>
+
+  <div class="footer-apoio">
+    <h4>Apoio</h4>
+    <article class="card3">
+      <img alt="Apoio" src="assets/img/fundo3.png" />
+    </article>
+    <div class="footer-credits-container">
+      <p class="footer-credits">
+        Créditos: Gizelly Di Sousa (Autoria) •
+        <a href="https://github.com/Djavanpro7" rel="noopener" target="_blank">Djavan (devWeb)</a>
+      </p>
+    </div>
   </div>
 </footer>
-    </div>
-  </body>
+</div>
+</body>
 </html>

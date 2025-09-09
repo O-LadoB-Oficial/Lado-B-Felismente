@@ -1,5 +1,5 @@
 // =============================
-// Navegação Overlay (menu mobile)
+// Navegação Off-canvas (menu mobile)
 // =============================
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
@@ -9,18 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openMenu() {
     navMenu.classList.add('show');
-    navToggle.classList.add('active');
     navToggle.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('no-scroll');
-    history.pushState({ menu: true }, "");
+    document.body.classList.add('offcanvas-open');
+    history.pushState({ menu: true }, ""); // adiciona histórico para botão voltar
   }
 
   function closeMenu() {
     if (navMenu.classList.contains('show')) {
       navMenu.classList.remove('show');
-      navToggle.classList.remove('active');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove('offcanvas-open');
     }
   }
 
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fecha ao clicar fora (overlay)
   document.addEventListener('click', (e) => {
-    if (document.body.classList.contains('no-scroll') &&
+    if (document.body.classList.contains('offcanvas-open') &&
         !navMenu.contains(e.target) &&
         !navToggle.contains(e.target)) {
       closeMenu();
@@ -108,3 +106,29 @@ function initModals() {
 }
 
 document.addEventListener('DOMContentLoaded', initModals);
+
+// =============================
+// Lightbox para galerias (imagens com .lightbox)
+// =============================
+function initLightbox() {
+  document.querySelectorAll('.lightbox').forEach(a => {
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+
+      const modal = document.createElement('div');
+      modal.className = 'modal show';
+      modal.innerHTML = `
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <button class="modal-close">&times;</button>
+          <img src="${this.getAttribute('href')}" alt="" style="width:100%; height:auto; border-radius:12px;">
+        </div>`;
+      document.body.appendChild(modal);
+
+      // Fecha clicando fora ou no botão X
+      modal.addEventListener('click', () => modal.remove());
+      modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initLightbox);
