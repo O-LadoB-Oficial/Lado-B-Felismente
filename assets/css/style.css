@@ -96,8 +96,8 @@ body {
 .section-title {
   background: url("../img/fundo4.png") no-repeat center center/cover;
   font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
-  margin: 0 0px 0px;
-  padding: -200px 0px 0px;
+  margin: 0px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -324,7 +324,6 @@ body {
   border-color: rgba(255, 255, 255, 0.18);
 }
 .card3 {
-  background: url("assets/img/banner1.png") no-repeat center center/cover;
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;

@@ -78,6 +78,7 @@ function initModals() {
       const id = card.getAttribute('data-modal');
       const modal = document.getElementById('modal-' + id);
       if (modal) modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false'); 
     });
   });
 
@@ -85,6 +86,7 @@ function initModals() {
   document.querySelectorAll('.modal').forEach(m => {
     m.addEventListener('click', () => {
       m.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
     });
   });
 
